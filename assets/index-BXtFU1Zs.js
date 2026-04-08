@@ -4467,7 +4467,7 @@ void main() {
                     <div style="font-size:32px;">${n.icon}</div>
                     <div>
                         <div class="vr-body" style="font-size:16px;font-weight:800;color:#c9a24e;">${n.name}</div>
-                        <div class="vr-body" style="font-size:11px;opacity:0.5;">Active Ability — Press Q during run</div>
+                        <div class="vr-body" style="font-size:11px;opacity:0.5;">Active Ability — Press R during run</div>
                     </div>
                 </div>
                 <div class="vr-body" style="font-size:13px;opacity:0.7;margin-bottom:8px;">
@@ -5182,7 +5182,7 @@ void main() {
                             <span style="color:#c9a24e;">S or Down</span><span style="opacity:0.5;">Slide</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(194,158,80,0.08);padding:4px 0;">
-                            <span style="color:#c9a24e;">F</span><span style="opacity:0.5;">Strike / Break Chests</span>
+                            <span style="color:#c9a24e;">F</span><span style="opacity:0.5;">Strike</span>
                         </div>
                         <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(194,158,80,0.08);padding:4px 0;">
                             <span style="color:#c9a24e;">R</span><span style="opacity:0.5;">Ability</span>
@@ -5218,9 +5218,9 @@ void main() {
                     <ul style="margin-top:10px;">
                         <li>Switch between <span class="vr-guide-highlight">3 lanes</span> to avoid obstacles</li>
                         <li><span class="vr-guide-highlight">Jump</span> over barriers and <span class="vr-guide-highlight">Slide</span> under gates</li>
-                        <li><span class="vr-guide-highlight">Strike</span> to break chests and collect loot</li>
+                        <li><span class="vr-guide-highlight">Strike</span> to break gates</li>
                         <li>Use your hero's <span class="vr-guide-highlight">Ability</span> for a powerful advantage</li>
-                        <li>Collect <span class="vr-guide-highlight" style="color:#f0c040;">coins</span> and <span class="vr-guide-highlight" style="color:#c0a0e0;">stardust</span> on the run</li>
+                        <li>Collect <span class="vr-guide-highlight" style="color:#f0c040;">coins</span>, <span class="vr-guide-highlight">chests</span>, and <span class="vr-guide-highlight" style="color:#c0a0e0;">stardust</span> on the run</li>
                     </ul>
                 </div>
 
@@ -5317,7 +5317,7 @@ void main() {
                         <li>If nobody plays, the pool doesn't grow and no rewards are paid</li>
                         <li>If positions churn frequently, holders don't reach milestones</li>
                         <li>Only consistent, skilled players who hold their rank earn PYR</li>
-                        <li>Rewards are claimed from the <span class="vr-guide-highlight">Glory</span> screen when milestones are reached</li>
+                        <li>Rewards are claimed from the <span class="vr-guide-highlight">Leaderboard</span> screen when milestones are achieved</li>
                     </ul>
                 </div>
 
