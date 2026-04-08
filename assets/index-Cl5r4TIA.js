@@ -5035,6 +5035,12 @@ void main() {
                 </div>
             </div>
 
+            <div style="position:absolute;top:64px;right:16px;animation:slideDown 0.5s ease-out 0.2s both;">
+                <button id="btn-daily" class="vr-btn vr-btn-gold" style="width:140px;">DAILY</button>
+            </div>
+
+            <button id="btn-leaderboard" class="vr-btn" style="position:absolute;bottom:24px;right:24px;width:180px;letter-spacing:2px;background:linear-gradient(135deg,#d4af37 0%,#f5d76e 45%,#b8860b 100%);color:#2a1e12;border:2px solid #c0c0c0;box-shadow:0 0 14px rgba(212,175,55,0.45),inset 0 1px 0 rgba(255,255,255,0.4);text-shadow:0 1px 1px rgba(255,255,255,0.3);font-weight:800;animation:slideUp 0.5s ease-out 0.4s both;">LEADERBOARD</button>
+
             <div style="text-align:center;margin-top:50px;animation:slideDown 0.6s ease-out;">
                 <div style="font-size:11px;letter-spacing:8px;opacity:0.35;margin-bottom:8px;" class="vr-body" style="color:rgba(194,158,80,0.5);">VULCAN FORGED PRESENTS</div>
                 <h1 class="vr-title" style="font-size:56px;line-height:1;margin-bottom:2px;color:#c9a24e;text-shadow:0 2px 8px rgba(0,0,0,0.6),0 0 40px rgba(194,158,80,0.15);letter-spacing:3px;">VULCAN<br>RUNNER</h1>
@@ -5042,28 +5048,23 @@ void main() {
                 <div style="font-size:12px;opacity:0.3;letter-spacing:4px;" class="vr-title">ENDLESS FANTASY RUNNER</div>
             </div>
 
-            <div style="margin-top:44px;animation:popIn 0.5s ease-out 0.2s both;">
-                <button id="btn-play" class="vr-btn vr-btn-primary" style="letter-spacing:3px;">BEGIN</button>
+            <div style="display:flex;gap:14px;margin-top:44px;align-items:center;justify-content:center;animation:popIn 0.5s ease-out 0.2s both;">
+                <button id="btn-play" class="vr-btn" style="width:300px;height:72px;font-size:20px;letter-spacing:3px;background:linear-gradient(135deg,#1aa84a 0%,#26d962 100%);color:#fff;border:2px solid #26d962;box-shadow:0 0 18px rgba(38,217,98,0.55),inset 0 1px 0 rgba(255,255,255,0.3);font-weight:800;">START ENDLESS RUN</button>
+                <button id="btn-campaign" class="vr-btn vr-btn-secondary" style="width:160px;height:72px;">CAMPAIGN</button>
             </div>
 
-            <div style="display:flex;gap:12px;margin-top:16px;animation:slideUp 0.5s ease-out 0.25s both;">
-                <button id="btn-campaign" class="vr-btn vr-btn-secondary" style="width:150px;">CAMPAIGN</button>
-                <button id="btn-heroes" class="vr-btn vr-btn-secondary" style="width:150px;">HEROES</button>
+            <div style="display:flex;gap:12px;margin-top:18px;animation:slideUp 0.5s ease-out 0.3s both;">
+                <button id="btn-heroes" class="vr-btn" style="width:150px;background:linear-gradient(135deg,#5a1818 0%,#8b2020 100%);color:#ffd9d9;border:2px solid #8b2020;">HEROES</button>
+                <button id="btn-shop" class="vr-btn" style="width:150px;background:linear-gradient(135deg,#5a1818 0%,#8b2020 100%);color:#ffd9d9;border:2px solid #8b2020;">ARMOURY</button>
+                <button id="btn-forge" class="vr-btn" style="width:150px;background:linear-gradient(135deg,#5a1818 0%,#8b2020 100%);color:#ffd9d9;border:2px solid #8b2020;">FORGE</button>
             </div>
 
-            <div style="display:flex;gap:12px;margin-top:10px;animation:slideUp 0.5s ease-out 0.3s both;">
-                <button id="btn-shop" class="vr-btn vr-btn-gold" style="width:150px;">ARMOURY</button>
-                <button id="btn-leaderboard" class="vr-btn vr-btn-cyan" style="width:150px;">GLORY</button>
+            <div style="margin-top:12px;animation:slideUp 0.5s ease-out 0.35s both;">
+                <button id="btn-vanity" class="vr-btn vr-btn-secondary" style="width:200px;border-color:#8a5ab5;color:#c0a0e0;">VANITY</button>
             </div>
 
-            <div style="display:flex;gap:12px;margin-top:10px;animation:slideUp 0.5s ease-out 0.35s both;">
-                <button id="btn-forge" class="vr-btn vr-btn-secondary" style="width:150px;border-color:#c9a24e;color:#c9a24e;">FORGE</button>
-                <button id="btn-vanity" class="vr-btn vr-btn-secondary" style="width:150px;border-color:#8a5ab5;color:#c0a0e0;">VANITY</button>
-            </div>
-
-            <div style="display:flex;gap:12px;margin-top:10px;animation:slideUp 0.5s ease-out 0.4s both;">
-                <button id="btn-daily" class="vr-btn vr-btn-gold" style="width:150px;">DAILY</button>
-                <button id="btn-guide" class="vr-btn vr-btn-secondary" style="width:150px;">GUIDE</button>
+            <div style="margin-top:10px;animation:slideUp 0.5s ease-out 0.4s both;">
+                <button id="btn-guide" class="vr-btn" style="width:200px;background:linear-gradient(135deg,#4a4a4a 0%,#6b6b6b 100%);color:#f0f0f0;border:2px solid #7a7a7a;">GUIDE</button>
             </div>
         `,co(this.menu,10),e.appendChild(this.menu),this.selectedCharacter="knight",this.charSelect=document.createElement("div"),this.charSelect.id="char-select",this.charSelect.className="vr-screen",this.charSelect.innerHTML=`
             <h2 class="vr-title" style="font-size:26px;margin-bottom:4px;color:#c9a24e;text-shadow:0 2px 6px rgba(0,0,0,0.5);animation:slideDown 0.4s ease-out;">CHOOSE YOUR WARRIOR</h2>
