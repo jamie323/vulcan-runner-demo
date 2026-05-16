@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Vulcan Runner — Visual Lab</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            background: #1a0a30;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            color: #fff;
+        }
+        #lab-root { position: relative; width: 100%; height: 100%; }
+        #lab-canvas { display: block; width: 100%; height: 100%; }
+        #lab-toolbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            display: flex; align-items: center; gap: 8px;
+            padding: 10px 14px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0));
+            z-index: 100;
+            pointer-events: none;
+        }
+        #lab-toolbar > * { pointer-events: auto; }
+        .lab-title {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            color: #ffd66e;
+            margin-right: 12px;
+            text-shadow: 0 1px 2px #000;
+        }
+        .lab-tab {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: #fff;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(6px);
+            transition: all 0.18s ease;
+        }
+        .lab-tab:hover { background: rgba(255,255,255,0.16); }
+        .lab-tab.active {
+            background: #ffd66e;
+            color: #1a0a30;
+            border-color: #ffd66e;
+        }
+        #lab-info {
+            position: fixed; bottom: 12px; left: 12px;
+            background: rgba(0,0,0,0.7);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 12px;
+            line-height: 1.4;
+            max-width: 320px;
+            z-index: 100;
+            backdrop-filter: blur(6px);
+        }
+        #lab-info b { color: #ffd66e; }
+        #lab-loading {
+            position: fixed; inset: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: #1a0a30;
+            color: #ffd66e;
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 200;
+            transition: opacity 0.3s ease;
+        }
+        #lab-loading.hidden { opacity: 0; pointer-events: none; }
+    </style>
+  <script type="module" crossorigin src="./assets/lab-B8GhdKB-.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-DgzTvXVn.js">
+</head>
+<body>
+    <div id="lab-root">
+        <canvas id="lab-canvas"></canvas>
+        <div id="lab-toolbar">
+            <span class="lab-title">🧪 VISUAL LAB</span>
+            <button class="lab-tab active" data-scene="painted2d">Painted 2.5D</button>
+            <button class="lab-tab" data-scene="billboards3d">Billboards 3D</button>
+            <button class="lab-tab" data-scene="meshy3d">Meshy 3D</button>
+        </div>
+        <div id="lab-info">
+            <b>Painted 2.5D</b><br>
+            Mockup-style parallax. Hero sprite + layered painted backgrounds.<br>
+            <span style="opacity:0.7">Tap tabs above to switch experiments. Live game untouched.</span>
+        </div>
+        <div id="lab-loading">Loading visual lab…</div>
+    </div>
+</body>
+</html>

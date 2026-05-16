@@ -6,6 +6,17 @@
          without it iOS clips the HUD behind the notch / home indicator on
          iPhone X and newer. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- Force browser to revalidate index.html on every load so users
+         always pick up the latest hashed-bundle reference. Without
+         this, mobile Safari especially can cache index.html for
+         hours, leaving users on a stale build that points to a
+         since-replaced bundle. Caught 2026-05-16 when QA testers
+         were missing fixes that had shipped hours earlier. The
+         hashed bundle files themselves stay cacheable forever
+         (their hash changes when content changes). -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <!-- iOS standalone (add to Home Screen) + notch tint. -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -25,7 +36,9 @@
         #ui { position: fixed; inset: 0; pointer-events: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji'; color: #fff; z-index: 10; }
         #ui > * { pointer-events: auto; }
     </style>
-  <script type="module" crossorigin src="./assets/index-tsg1_uHJ.js"></script>
+  <script type="module" crossorigin src="./assets/main-D5HPhqn0.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/preload-helper-DgzTvXVn.js">
+  <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-DuXoLxQr.js">
 </head>
 <body>
     <div id="ui"></div>
