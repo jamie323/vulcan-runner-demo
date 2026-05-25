@@ -20,11 +20,15 @@
     <!-- iOS standalone (add to Home Screen) + notch tint. -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="theme-color" content="#1a0a30">
+    <meta name="theme-color" content="#0e0a04">
     <title>Vulcan Runner</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; overflow: hidden; background: #000; overscroll-behavior: none; }
+        /* sognoDomhan: 'Blue blank area at bottom of menu screens'. iOS WKWebView
+           was showing the SwiftUI parent tint through env(safe-area-inset-bottom).
+           Pin html+body to the runner's dark palette and let them stretch to 100dvh
+           so the home-indicator zone reads as part of the page. */
+        html, body { width: 100%; height: 100%; min-height: 100dvh; overflow: hidden; background: #0e0a04; overscroll-behavior: none; }
         /* Kill iOS Safari's text-size inflation on rotate / tap (default
            200% zoom breaks our precise HUD). */
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -36,7 +40,7 @@
         #ui { position: fixed; inset: 0; pointer-events: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji'; color: #fff; z-index: 10; }
         #ui > * { pointer-events: auto; }
     </style>
-  <script type="module" crossorigin src="./assets/main-DTTSYhG0.js"></script>
+  <script type="module" crossorigin src="./assets/main-D1P9VjpA.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/preload-helper-CiFt1x5u.js">
   <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-QIwOK3nA.js">
 </head>
