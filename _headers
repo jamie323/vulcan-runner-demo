@@ -1,0 +1,21 @@
+# Cloudflare Pages / Netlify cache headers (Jamie 28 May 2026).
+# Root cause of 'web testers stuck on an old version even after
+# refresh': index.html had no explicit Cache-Control, so browsers
+# applied heuristic caching and could serve a stale HTML pointer to
+# an old bundle. The hashed /assets/* files are immutable so they
+# cache forever; only the HTML entry point must always revalidate.
+
+# HTML entry points — always revalidate so a deploy is picked up
+# on the very next load, no hard-refresh required.
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/lab/
+  Cache-Control: no-cache, no-store, must-revalidate
+/lab/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Content-hashed assets are immutable — cache hard.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
