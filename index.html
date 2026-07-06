@@ -40,11 +40,15 @@
         #ui { position: fixed; inset: 0; pointer-events: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji'; color: #fff; z-index: 10; }
         #ui > * { pointer-events: auto; }
     </style>
-  <script type="module" crossorigin src="./assets/main-BrRigvHp.js"></script>
+  <script type="module" crossorigin src="./assets/main-CFaAty0x.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three.module-BbtDlLjC.js">
   <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-CtSHG5QV.js">
 </head>
 <body>
     <div id="ui"></div>
+    <!-- VulcanX unified-gateway SSO (auth.js). Runtime override so it applies
+         regardless of build-env VITE_GATEWAY_URL; auth fails soft if the
+         gateway is unreachable (legacy trust-the-wallet mode). -->
+    <script>window.__VR_GATEWAY_URL__ = 'https://api.vulcan-x.io';</script>
 </body>
 </html>
