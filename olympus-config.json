@@ -1,0 +1,11 @@
+{
+  "_note": "Olympus Run iOS remote switchboard. Read by the shell at launch and on foreground (RemoteConfig.swift, 1.0.1+). Edit here, deploy the web build, done — no App Store update needed.",
+  "ads": {
+    "interstitial": {
+      "enabled": true,
+      "minRuns": 3,
+      "everyNExits": 2,
+      "minGapSec": 120
+    }
+  }
+}
