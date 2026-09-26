@@ -12,7 +12,6 @@
     "gating": "off"
   },
   "treasury": {
-    "mode": "on",
-    "threshold": 50
+    "mode": "on"
   }
 }
