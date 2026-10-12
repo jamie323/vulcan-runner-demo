@@ -13,5 +13,8 @@
   },
   "treasury": {
     "mode": "ab"
+  },
+  "firstSession": {
+    "flow": "instant"
   }
 }
