@@ -9,7 +9,8 @@
     }
   },
   "worlds": {
-    "gating": "off"
+    "gating": "off",
+    "progression": "off"
   },
   "treasury": {
     "mode": "ab"
